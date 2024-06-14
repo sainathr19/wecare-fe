@@ -9,38 +9,47 @@ import {
 } from "@radix-ui/react-icons";
 
 import { Card, CardTitle } from "../ui/card";
+import Link from "next/link";
 const Sidebar = () => {
   return (
-    <div className="hidden sm:block min-w-[250px] shadow-xl  p-3">
+    <div className="hidden sm:block min-w-[210px] shadow-xl px-3">
       <header>
-        <Card className="p-4 py-6 shadow-none border-none">
-          <CardTitle className="text-[2rem]">WeCare</CardTitle>
+        <Card className="p-4 py-4 shadow-none border-none">
+          <CardTitle className="text-[2.5rem]">WeCare</CardTitle>
         </Card>
       </header>
-      <Command className="text-muted-foreground font-semibold">
-        <CommandList>
-          <CommandItem className="flex gap-1 items-center my-2">
-            <DashboardIcon className="mr-2 h-6 w-6" />
+      <Card className="border-none shadow-none font-normal text-muted-foreground">
+        <section className="flex flex-col gap-2">
+          <Link
+            href="/doctor/dashboard"
+            className="flex gap-1 items-center text-xl px-3  py-2 hover:bg-muted"
+          >
+            <DashboardIcon className="mr-2 h-5 w-5" />
             <span>Dashboard</span>
-          </CommandItem>
-          <CommandItem className="flex gap-1 items-center my-2">
-            <CalendarIcon className="mr-2 h-6 w-6" />
-            <span>Appointments</span>
-          </CommandItem>
-          <CommandItem className="flex gap-1 items-center my-2">
-            <PersonIcon className="mr-2 h-6 w-6" />
+          </Link>
+          <Link
+            href="/doctor/patientlist"
+            className="flex gap-1 items-center text-xl px-3  py-2 hover:bg-muted"
+          >
+            <PersonIcon className="mr-2 h-5 w-5" />
             <span>Patient List</span>
-          </CommandItem>
-          <CommandItem className="flex gap-1 items-center my-2">
-            <EnvelopeClosedIcon className="mr-2 h-6 w-6" />
+          </Link>
+          <Link
+            href="/doctor/appointments"
+            className="flex gap-1 items-center text-xl px-3  py-2 hover:bg-muted"
+          >
+            <CalendarIcon className="mr-2 h-5 w-5" />
+            <span>Appointments</span>
+          </Link>
+          <Link
+            href="/doctor/messages"
+            className="flex gap-1 items-center text-xl px-3  py-2 hover:bg-muted"
+          >
+            <EnvelopeClosedIcon className="mr-2 h-5 w-5" />
             <span>Messages</span>
-          </CommandItem>
-          <CommandItem className="flex gap-1 items-center my-2">
-            <ChatBubbleIcon className="mr-2 h-6 w-6" />
-            <span>Support</span>
-          </CommandItem>
-        </CommandList>
-      </Command>
+          </Link>
+        </section>
+      </Card>
     </div>
   );
 };

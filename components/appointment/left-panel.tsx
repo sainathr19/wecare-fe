@@ -1,20 +1,6 @@
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-  TooltipProvider,
-} from "@/components/ui/tooltip";
 import { useLocale } from "@react-aria/i18n";
 import { CalendarIcon, Clock4, MapPin, Stethoscope } from "lucide-react";
 import { useSearchParams } from "next/navigation";
-import { timeZones } from "./time-zones";
 
 export function LeftPanel({
   showForm,
@@ -64,7 +50,7 @@ export function LeftPanel({
         </div>
         <div className="flex items-center text-gray-12">
           <MapPin className="size-4 mr-2" />
-          <p className="text-sm font-semibold">Amma Hospital</p>
+          <p className="text-sm font-semibold">WeCare Hospitals</p>
         </div>
       </div>
     </div>

@@ -29,8 +29,8 @@ import React from "react";
 import { Card, CardDescription, CardHeader, CardTitle } from "../ui/card";
 const Navbar = () => {
   return (
-    <div className="flex justify-center items-center">
-      <Command className="rounded-lg border shadow-md mx-9">
+    <div className="flex justify-center items-center shadow-md">
+      <Command className="rounded-lg border shadow-md mx-9 h-max">
         <CommandInput placeholder="Search anything..." />
       </Command>
       <DropdownMenu>

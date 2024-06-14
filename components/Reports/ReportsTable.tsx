@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Table,
   TableBody,
@@ -13,12 +15,13 @@ import {
   EyeOpenIcon,
   DownloadIcon,
 } from "@radix-ui/react-icons";
-// import { Badge, BadgeDelta } from "@tremor/react";
 import { Button } from "../ui/button";
 import { Badge } from "../Badge/Badge";
+import { CardDescription } from "../ui/card";
+import { redirect, useRouter } from "next/navigation";
 import Link from "next/link";
 
-const invoices = [
+const reports: any[] = [
   {
     measurement: "99.00",
     date: "22 May 2023",
@@ -50,6 +53,8 @@ const invoices = [
 ];
 
 export default function ReportsTable() {
+  const router = useRouter();
+
   return (
     <Table>
       <TableHeader>
@@ -61,22 +66,24 @@ export default function ReportsTable() {
         </TableRow>
       </TableHeader>
       <TableBody>
-        {invoices.map((invoice) => (
-          <TableRow key={invoice.date}>
+        {reports.map((report) => (
+          <TableRow key={report.date}>
             <TableCell className="font-medium text-center">
-              {invoice.date}
+              {report.date}
             </TableCell>
             <TableCell className="font-medium text-center">
-              {invoice.time}
+              {report.time}
             </TableCell>
             <TableCell className="text-center">
-              <Badge variant="success">{invoice.status}</Badge>
+              <Badge variant="success">{report.status}</Badge>
             </TableCell>
             <TableCell className="flex gap-2 justify-center">
-              <Button variant="outline">
-                <Link href="/report">
-                  <EyeOpenIcon />
-                </Link>
+              <Button
+                type="button"
+                variant="outline"
+                onClick={() => router.push("/doctor/reports/Az8b9")}
+              >
+                <EyeOpenIcon />
               </Button>
               <Button variant="outline">
                 <DownloadIcon />

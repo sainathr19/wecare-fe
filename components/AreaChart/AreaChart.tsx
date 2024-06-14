@@ -5,38 +5,50 @@ const chartdata = [
   {
     date: "Jan 23",
     BPM: 167,
+    pulse: 100,
+    sugar: 90,
+    oxygen: 100,
+    weight: 90,
   },
   {
-    date: "Feb 23",
-    BPM: 125,
+    date: "Jan 24",
+    BPM: 167,
+    pulse: 100,
+    sugar: 90,
+    oxygen: 100,
+    weight: 90,
   },
   {
-    date: "Mar 23",
-    BPM: 156,
+    date: "Jan 25",
+    BPM: 152,
+    pulse: 95,
+    sugar: 50,
+    oxygen: 125,
+    weight: 45,
   },
   {
-    date: "Apr 23",
-    BPM: 165,
+    date: "Jan 26",
+    BPM: 45,
+    pulse: 75,
+    sugar: 125,
+    oxygen: 10,
+    weight: 90,
   },
   {
-    date: "May 23",
-    BPM: 153,
+    date: "Jan 27",
+    BPM: 176,
+    pulse: 125,
+    sugar: 85,
+    oxygen: 120,
+    weight: 90,
   },
   {
-    date: "Jun 23",
-    BPM: 124,
-  },
-  {
-    date: "Jun 24",
-    BPM: 14,
-  },
-  {
-    date: "Jun 25",
-    BPM: 75,
-  },
-  {
-    date: "Jun 26",
-    BPM: 124,
+    date: "Jan 28",
+    BPM: 167,
+    pulse: 90,
+    sugar: 100,
+    oxygen: 85,
+    weight: 89,
   },
 ];
 
@@ -53,6 +65,7 @@ export default function AreaChartComponent() {
         customTooltip={customTooltip}
         showGradient={false}
         curveType="natural"
+        showAnimation
       />
     </>
   );

@@ -12,6 +12,13 @@ import AreaChartComponent from "@/components/AreaChart/AreaChart";
 import DataTable from "@/components/AreaChart/DataTable";
 
 const Biometrics = () => {
+  const metricList: string[] = [
+    "Blood Presure",
+    "Pulse",
+    "Blood Sugar",
+    "Blood Oxygen",
+    "Weight",
+  ];
   return (
     <Tabs defaultValue="bp" className="">
       <Card>

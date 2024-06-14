@@ -1,11 +1,10 @@
-import React from "react";
 import PatientReportTemplate from "@/templates/reports/patient-report";
-const Report = () => {
+import React from "react";
+const page = () => {
   return (
     <div>
       <PatientReportTemplate />
     </div>
   );
 };
-
-export default Report;
+export default page;

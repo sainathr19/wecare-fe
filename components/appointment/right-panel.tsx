@@ -6,6 +6,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import type { DateValue } from "@react-aria/calendar";
 import { useLocale } from "@react-aria/i18n";
 import { availableTimes } from "./available-times";
+import Link from "next/link";
 
 export function RightPanel({
   date,
@@ -71,7 +72,9 @@ export function RightPanel({
         </TabsContent>
       ))}
       <footer className="text-center my-4 mr-5">
-        <Button>Continue</Button>
+        <Button>
+          <Link href="/appointment/status">Continue</Link>
+        </Button>
       </footer>
     </Tabs>
   );
